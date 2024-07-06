@@ -1,3 +1,13 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: "charts",
+    loadComponent: () => import("./charts/chart.component"),
+  },
+  {
+    path: "**",
+    redirectTo: "charts",
+    pathMatch: "full",
+  },
+];

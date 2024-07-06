@@ -32,6 +32,12 @@ importers:
       '@angular/router':
         specifier: ^18.1.0-next.0
         version: 18.1.0-rc.0(@angular/common@18.1.0-rc.0(@angular/core@18.1.0-rc.0(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.1.0-rc.0(rxjs@7.8.1)(zone.js@0.14.7))(@angular/platform-browser@18.1.0-rc.0(@angular/animations@18.1.0-rc.0(@angular/core@18.1.0-rc.0(rxjs@7.8.1)(zone.js@0.14.7)))(@angular/common@18.1.0-rc.0(@angular/core@18.1.0-rc.0(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.1.0-rc.0(rxjs@7.8.1)(zone.js@0.14.7)))(rxjs@7.8.1)
+      echarts:
+        specifier: ^5.5.1
+        version: 5.5.1
+      ngx-echarts:
+        specifier: ^18.0.0
+        version: 18.0.0(echarts@5.5.1)
       rxjs:
         specifier: ~7.8.0
         version: 7.8.1
@@ -1904,6 +1910,9 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
+  echarts@5.5.1:
+    resolution: {integrity: sha512-Fce8upazaAXUVUVsjgV6mBnGuqgO+JNDlcgF79Dksy4+wgGpQB2lmYoO4TSweFg/mZITdpGHomw/cNBJZj1icA==}
+
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
@@ -2707,6 +2716,11 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
+  ngx-echarts@18.0.0:
+    resolution: {integrity: sha512-1rJW7vhMTTQMZNO5AhbHfTDorhP7dcvwRsDH5jFk2SPb/gjIFWvXBY9VSNAOKumuSBnopm2+uSz6BRO5oWxovA==}
+    peerDependencies:
+      echarts: '>=5.0.0'
+
   nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
     os: ['!win32']
@@ -3440,6 +3454,9 @@ packages:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
 
+  tslib@2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
@@ -3701,6 +3718,9 @@ packages:
 
   zone.js@0.14.7:
     resolution: {integrity: sha512-0w6DGkX2BPuiK/NLf+4A8FLE43QwBfuqz2dVgi/40Rj1WmqUskCqj329O/pwrqFJLG5X8wkeG2RhIAro441xtg==}
+
+  zrender@5.6.0:
+    resolution: {integrity: sha512-uzgraf4njmmHAbEUxMJ8Oxg+P3fT04O+9p7gY+wJRVxo8Ge+KmYv0WJev945EH4wFuc4OY2NLXz46FZrWS9xJg==}
 
 snapshots:
 
@@ -5860,6 +5880,11 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
+  echarts@5.5.1:
+    dependencies:
+      tslib: 2.3.0
+      zrender: 5.6.0
+
   ee-first@1.1.1: {}
 
   electron-to-chromium@1.4.818: {}
@@ -6670,6 +6695,11 @@ snapshots:
 
   neo-async@2.6.2: {}
 
+  ngx-echarts@18.0.0(echarts@5.5.1):
+    dependencies:
+      echarts: 5.5.1
+      tslib: 2.6.3
+
   nice-napi@1.0.2:
     dependencies:
       node-addon-api: 3.2.1
@@ -7464,6 +7494,8 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
+  tslib@2.3.0: {}
+
   tslib@2.6.3: {}
 
   tuf-js@2.2.1:
@@ -7726,3 +7758,7 @@ snapshots:
   yoctocolors-cjs@2.1.2: {}
 
   zone.js@0.14.7: {}
+
+  zrender@5.6.0:
+    dependencies:
+      tslib: 2.3.0
